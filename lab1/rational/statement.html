@@ -1,0 +1,64 @@
+<body>
+
+  <blockquote>
+  <p><b>Note: All code should be written within <a href="">this template directory</a></b>. Test cases have been provided in the folder <code>tests</code>, and can be run using <code>make test</code>. </p> 
+  </blockquote>
+
+In this assignment, we will implement a data structure to represent a rational number p/q, and some basic operations on them.
+
+<h2>Rational Number Library</h2>
+Create a library to support the following operations on rational numbers:
+<ol>
+    <li><code>rational rational_parse( char* str )</code>: Read a string
+ "str" that contains the rational number in a "p/q" format into your 
+data structure. Make sure you reduce this to the simplest form.</li>
+    <li><code>void rational_print( rational x )</code>: Print the rational number x in the format "p/q" to the terminal (using printf) </li>
+    <li><code>rational rational_from_int( int p )</code>: Convert an integer to a rational number (p/1).</li>
+    <li><code>double rational_to_double( rational p )</code>: Convert a rational number p to a real number (of double type).</li>
+    <li><code>rational rational_add( rational p, rational q )</code>: Add two rational numbers p, q. Make sure you reduce the resultant sum.</li>
+    <li><code>rational rational_sub( rational p, rational q )</code>: Subtract two rational numbers p, q. Make sure you reduce the resultant sum.</li>
+    <li><code>rational rational_mul( rational p, rational q )</code>: Multiply two rational numbers p, q. Make sure you reduce the resultant.</li>
+    <li><code>rational rational_div( rational p, rational q )</code>: Divide two rational numbers p, q. Make sure you reduce the resultant.</li>
+    <li><code>rational rational_reciprocate( rational p )</code>: Compute "1/p".</li>
+</ol>
+
+<h2>Continued Fractions</h2>
+In mathematics, an infinite <a href="http://en.wikipedia.org/wiki/Continued_fraction">continued fraction</a>
+ is an infinite expression obtained through an iterative process of 
+representing a number as the sum of its integer part and the reciprocal 
+of another number, then writing this other number as the sum of its 
+integer part and another reciprocal, and so on.
+
+In this exercise, we will use the rational number library you just wrote
+ to compute some continued fractions. You may refer Wikipedia for the 
+form of the continued fractions.
+
+<ol>
+ <li>
+    A finite continued fraction can be represented as a list a<sub>0</sub>,
+    a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, and is computed as
+    a<sub>0</sub> + 1/( a<sub>1</sub> + 1/( a<sub>2</sub> + 1/a<sub>3</sub> )
+    ).  
+    
+    Write a program that will allow the user to enter 4 integers for
+    a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, respectively,
+    and will print the double value of the appropriate continued fraction. 
+    <br />
+    <b>Input:</b><code>200 0 10 8</code> <br />
+    <b>Output:</b><code>210.125000</code> <br />
+ </li>
+ <li>
+   π can be expressed as an infinite continued fraction, with a<sub>i</sub> =
+   [3,7,15,1,292,1,1,1,2,1,3,1,14,2,1,1,2,2,2,2,1,84,...]. Let's study how the
+   accuracy of the continued fraction improves as you consider longer
+   sequences. Compute the continued fraction from the first 'k' values of
+   a<sub>i</sub> (given as user input), and print the relative error with
+   respect to π from <code>math.h</code>, in scientific notation (i.e. use
+   <code>%e</code>).
+   <br />
+   <b>Input:</b><code>4</code> <br />
+   <b>Output:</b><code>-8.491368e-08</code> <br />
+  </li>
+</ol>
+
+</body>

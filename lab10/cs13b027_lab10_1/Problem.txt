@@ -1,0 +1,35 @@
+N_Queens is a puzzle that is set on an N x N (N > 3) cell chessboard. The task is to place N queens on it such that no queen can get to any other queen's position in 1 move. The number of solutions, as you would guess, varies with the size of the board.
+
+Set 1: Your task, given the board size N, is to find the number of ways possible of placing these N queens on the board. 
+
+Set 2: In this set, given the board size N, with M queens already placed on the board, you have to determine whether the given set of queen positions is legal, and if so, determine the number of ways the rest of the queens can be placed on the board after fixing the positions of the M queens.
+
+You will be awarded marks separately for each of the 2 sets above.
+
+Read more about the N-Queens problem here: http://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+I/O:
+
+The first line of the input file contains t. The test input starts in the next line.
+
+t = 0
+In this case, the test input consists of a single integer, N. The output should consist of a single number, which is the number of possible solutions of the puzzle on the N x N board.
+
+t = 1
+The first line of the test input contains 2 integers separated by a space N, M. The next M lines contain the position of each of the M queens as 2 space separated integers. The output should consist of either a single integer which denotes the number of possible solutions after fixing the given M queen positions. The output should be "Not a valid configuration" if the queen positions are initially invalid. (This case should not be confused with the case where the first M queens do not threaten each other, but it is not possible to build a solution with the given positions fixed - output in this case would be 0).
+
+Example tests:
+
+Input:
+0
+5
+Output:
+10
+
+Input:
+1
+5 2
+0 0
+4 4
+Output:
+Not a valid configuration

@@ -1,0 +1,11 @@
+append 1
+prepend 2
+append 3
+insert 0 4
+insert 1 5
+count
+remove-last
+remove-first
+remove 1
+count
+quit

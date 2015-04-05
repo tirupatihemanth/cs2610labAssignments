@@ -1,0 +1,57 @@
+<body>
+  <blockquote>
+  <p><b>Note: All code should be written within <a href="">this template directory</a></b>. Test cases have been provided in the folder <code>tests</code>, and can be run using <code>make test</code>. </p> 
+  </blockquote>
+
+<br>
+In this assignment, we will implement a data structure to store Big Integers. Big Integers are used to represent integers that are larger than the size of int supported by the language/system.
+
+<h2>Big Integer Library</h2>
+Create a library to support the following operations with big integers. 
+(For simplicity, you may assume that the size of big integers will be 
+at most 512 digits):
+
+<ol>
+    <li><code>bigint make_bigint(char* str)</code>: Parse a string and make it a Big Integer </li>
+    <li><code>void print_bigint(bigint big_num)</code>: Prints the Big Integer </li>
+    <li><code>bigint int_to_bigint(int num)</code>:  Creates and sets a bigint to value num</li>
+    <li><code>bigint init_bigint()</code>: Creates and sets the bigint value to zero</li>
+    <li><code>int compare_bigint(bigint a, bigint b)</code>: Compares two bigints and returns 0 if equal, +1 if a &gt; b and -1 if a &lt; b</li>
+    <li><code>bigint zero_adjustment(bigint big_num)</code>: Zero justify a number. Makes -0 in the result to +0 if bigint's valuation is zero.</li>
+    <li><code>bigint shift_by_power_of_10(bigint big_num, int d)</code>: Multiply a big int with 10<sup>d</sup></li>
+    <li><code>bigint bigint_add(bigint a, bigint b)</code>: Adds two bigints and returns the result (a + b) which is a bigint</li>
+    <li><code>bigint bigint_sub(bigint a, bigint b)</code>: Subtracts two bigints and returns the result (a - b) which is a bigint</li>
+    <li><code>bigint bigint_mul(bigint a, bigint b)</code>: Multiplies two bigints and returns the result (a * b) which is a bigint</li>
+    <li><code>bigint bigint_div(bigint a, bigint b)</code>: Divides two bigints and returns the result (a / b) which is a bigint</li>
+</ol>
+
+<i>Extra credit: Use malloc and suitably modify the functions above so that one can define arbitrary length bigints(viz. arbitrary number of digits)</i>
+
+<h2>Factorial using Big Integers</h2>
+
+In this exercise, you will use the Big Integer library you just wrote to compute the factorial of numbers. 
+<ol>
+ <li>
+   <br />
+   <b>Input:</b><code>100</code> <br />
+   <b>Output:</b>
+  <code>
+  933262154439441526816992388562667004907159682643816214685929638<br/>
+  9521759999322991560894146397615651828625369792082722375825118521091686<br/>4000000000000000000000000</code><br />
+
+ </li>
+</ol>
+
+<h2>Calculator (Big Integer Shell)</h2>
+<p> A basic command interface has been written for you in <code>main.c</code>, which allows you to enter commands like <code>set 100000</code>, etc. to set a bigint to 100000. After each command, the result is to be printed. As you implement the above functions, uncomment the corresponding function calls to them (these have been marked with a NOTE), and test them out. Once you are done, remove the debug print statements (also marked with a NOTE). </p>
+<p> The following commands are supported by the basic shell, </p>
+<ul>
+  <li> <code>quit</code>: Leave the command shell. Pressing &quot;Ctrl+D&quot; also quits the command shell. </li>
+  <li> <code>set x</code>: Sets a bigint to x and prints it</li>
+  <li> <code>add x y</code>: Adds 'x' and 'y' and prints the resultant bigint. </li>
+  <li> <code>sub x y</code>: Subtracts 'x' and 'y' and prints the resultant bigint. </li>
+  <li> <code>mul x y</code>: Multiplies 'x' and 'y' and prints the resultant bigint. </li>
+  <li> <code>div x y</code>: Divides 'x' and 'y' and prints the resultant bigint. </li>
+</ul>
+
+</body>

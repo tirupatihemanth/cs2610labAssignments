@@ -1,0 +1,67 @@
+<body>
+
+<h2>Stacks: A first data structure</h2>
+<p>
+The <a href="http://en.wikipedia.org/wiki/Stack_(data_structure)"> stack </a>
+is one of the most basic data structures you will ever use. In fact, your
+computer keeps track of how functions call each other using a stack (called the
+'call stack').
+</p>
+
+<p>
+In its barest form, it can be implemented as a singly-linked list which allows
+you to add and remove elements only to/from the front (also known as the
+'head') of the list.
+</p>
+
+<p>
+Implement a stack with at least the following operations:
+<ul>
+  <li> <code>Stack* stack_new()</code>: Creates a new, empty stack. </li>
+  <li> <code>void stack_delete( Stack* st )</code>: Deletes the stack, freeing all memory. </li>
+  <li> <code>Stack* stack_push( Stack* st, int val )</code>: Inserts
+  <code>val</code> to the top of the stack. Should return <code>st</code>
+  (<i>Note: By returning the same input, you can chain together many functions
+    like stack_pop( stack_pop( st ) ), etc. </i>).</li>
+  <li> <code>int stack_top( Stack* st, int* error  )</code>: Returns the
+  element currently at the top of the stack. If the stack is empty,
+  <code>error</code> should be set to 1, else 0. (<i>Note: <code>error</code>
+    is an argument passed by reference - give it the address to a locally
+    defined integer.</i>) </li>
+  <li> <code>Stack* stack_pop( Stack* st )</code>: Deletes the value at the top
+  of the stack. Remember to free memory. </li>
+  <li> <code>int stack_size( Stack* st )</code>: Return the number of elements in the stack. </li>
+  <li> <code>void stack_print( Stack* st )</code>: Iterates over the entire stack,
+  printing its elements one by one - separated by spaces.</li>
+</ul>
+</p>
+
+<h2>Evaluating Postfix Expressions</h2>
+<p>
+In this exercise, we will evaluate <a
+  href="http://en.wikipedia.org/wiki/Reverse_Polish_notation"> postfix
+  expressions </a> like "3 4 +" (which evaluates to 7). Postfix notation is
+particularly easy to program for, because all it requires is a stack.
+</p>
+
+<p>
+  Define a function <code>int evaluate_postfix( char* expr )</code> that takes
+  a postfix expression as input, and evaluates it. Use <a
+    href="http://www.cplusplus.com/reference/clibrary/cstring/strtok/">
+    <code>strtok</code> </a> to process the string. Support addition
+  (<code>+</code>), subtraction (<code>-</code>), multiplication
+  (<code>*</code>), and division (<code>/</code>). When dividing, use integer
+  division.
+</p>
+
+<p>
+Write a program using your stack library, and evaluate function that takes in only a postfix expression as input (use <a href="http://www.cplusplus.com/reference/clibrary/cstdio/fgets/"> <code>fgets</code> </a>), and prints the evaluated value.
+</p>
+
+<h3>Sample Input/Output</h3>
+<p>
+<b>Input:</b> <code>3 4 + 7 * 3 - 5 / </code> <br /> 
+<b>Output:</b> Print the output of the stack after each operation <br/>  <code>9</code>
+</p>
+
+</body>

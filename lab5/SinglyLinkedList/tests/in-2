@@ -1,0 +1,12 @@
+prepend 1
+prepend 2
+prepend 3
+prepend 4
+prepend 5
+remove-first
+remove-first
+remove-first
+remove-first
+remove-first
+count
+quit

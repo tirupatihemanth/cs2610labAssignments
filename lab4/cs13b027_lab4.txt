@@ -1,0 +1,28 @@
+﻿
+				 		LAB 4
+
+
+
+example1.c:
+
+	Have allotted 100 bytes of memory on heap in runtime but the memory wasn't freed
+
+
+
+example2.c:
+
+	10 bytes of memory was allocated dynamically during time but it wasn't freed. One more bug in the code is allocated memory block is of 10 bytes but x[10] access the 11th byte which is unallocated which isn't showed by valgrind but you may get a segmentation fault for this in long programs where that 11 the byte might have got allocated for some other use
+
+
+
+example3.c:
+
+	Non static and Non global variables are not initialised by default they just retain what ever was present before.some programming languages like c may instead show a garbage value. Actually the value can be anything.
+
+
+
+example4.c:
+
+	Again using the unallocated memory. This may result in a segmentation fault if that memory location might be in use by some other part of the program.
+
+	

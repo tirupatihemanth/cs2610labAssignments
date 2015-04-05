@@ -1,0 +1,22 @@
+#Makefile
+
+CC = gcc
+CFLAGS = -g
+LDFLAGS = -lm
+
+all: bstTraversal1
+
+bstTraversal1: bstTraversal1.o BSTree.o
+	$(CC) $(LDFLAGS) $^ -o $@
+
+bstTraversal1.o: bstTraversal1.c BSTree.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+BStree.o: BSTree.c BSTree.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+.PHONY: clean
+
+clean:
+	rm -rf *.o
+	rm -rf btTraversal1

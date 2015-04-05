@@ -1,0 +1,98 @@
+/*
+* Box stacking algorithm
+* Name: Tirupati Hemanth Kumar
+* Roll Number: cs13b027
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int criteria(const void *, const void *);
+
+int main(){
+
+	int i,j,n,max;
+	scanf("%d",&n);
+	int **mat = (int **) malloc(sizeof(int *)*n);
+	for(i=0;i<n;i++)
+		mat[i] = (int *) malloc(sizeof(int)*3);
+
+	for(i=0;i<n;i++){
+		for(j=0;j<3;j++){
+			scanf("%d",&mat[i][j]);
+		}
+	}
+
+	int **permute;
+	permute = (int **) malloc(sizeof(int *)*3*n);
+	for(i=0;i<3*n;i++)
+		permute[i] = (int *) malloc(sizeof(int)*3);
+
+	for(i=0;i<3*n;i++){
+		
+		if(i%3 == 0){
+
+			permute[i][0] = mat[i/3][0];
+			permute[i][1] = mat[i/3][1];
+			permute[i][2] = mat[i/3][2];
+
+		}
+
+		if(i%3 == 1){
+
+			permute[i][0] = mat[i/3][2];
+			permute[i][1] = mat[i/3][1];
+			permute[i][2] = mat[i/3][0];
+
+		}
+
+		if(i%3 == 2){
+
+			permute[i][0] = mat[i/3][0];
+			permute[i][1] = mat[i/3][2];
+			permute[i][2] = mat[i/3][1];
+
+		}
+
+	}
+
+	qsort(permute,3*n, sizeof(permute[0]), criteria);
+
+	int heights[3*n], m1, m2, M1, M2;
+	for(i=0;i<3*n;i++)
+		heights[i] = permute[i][2];
+
+	for(i=1;i< 3*n; i++){
+		for(j=0;j<i;j++){
+
+			if((permute[j][0]>permute[j][1]?permute[j][1]:permute[j][0]) < (permute[i][0]>permute[i][1]?permute[i][1]:permute[i][0]) && (permute[j][0]>permute[j][1]?permute[j][0]:permute[j][1])< (permute[i][0]>permute[i][1]?permute[i][0]:permute[i][1]) && heights[i]< heights[j] + permute[i][2])
+				heights[i] = heights[j] + permute[i][2];
+
+		}
+	}
+
+	max = heights[0];
+	for(i=0;i<3*n;i++){
+		if(heights[i] > max){
+			max = heights[i];
+		}
+	}
+	printf("%d",max);
+
+	return 0;
+}
+
+int criteria(const void *a, const void * b)	
+{
+	int* val1;
+	val1=(int *)malloc(sizeof(int)*2);
+	
+	int* val2;
+	val2=(int *)malloc(sizeof(int)*2);
+
+	val1=*(int *)a;
+	val2=*(int *)b;	
+    
+    return ( (val1[0]*val1[1]) - (val1[0]*val2[1]));
+}

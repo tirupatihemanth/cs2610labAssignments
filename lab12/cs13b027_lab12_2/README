@@ -1,0 +1,20 @@
+1) The first line of your inputs will have 'N', which is the number of nodes in the graph, followed by the edge weights in the directed graph. Please look at the sample inputs and outputs given in the test folder. The matrix has TAB separated values.
+
+2) To indicate that there is no path between any two nodes, "INF" is used as is shown in the given test files. For the input file, an INF at (i,j) indicates that there is no edge directed from node 'i' to node 'j'. For the output file, INF at (i,j) indicates there is no path from 'i' to 'j' even after considering all possible nodes. In the output, you actually need to print INF and not use the internal '-inf' and 'inf' provided.
+
+3) Entry at A[i][i] will always be 0 as it takes 0 steps to reach node 'i' from node 'i' itself.
+
+4) Note that in the inputs, an entry in A[i][j] indicates an edge from 'i' to 'j'.
+So, in the following matrix:
+
+Nodes	1	2	3
+___________________
+1	|	0	2	INF
+2	|	1	0	INF
+3	|	INF	3	0
+
+there is an edge from node 2 to node 1, an edge from node 1 to node 2 and an edge from node 3 to node 2. There is NO edge from node 2 to node 3.
+
+5) Animation for the Floyd Warshall algorithm can be found at: https://www.cs.usfca.edu/~galles/visualization/Floyd.html
+
+6) To check the validity of your algorithm, in addition to the given tests, the graphs given on the above mentioned site can be used.

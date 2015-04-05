@@ -1,0 +1,5 @@
+1) The input will have a number 'N' in the first line, indicating the number of boxes given to you. This will be followed by N lines having the dimensions of each box. Observe that it doesn't matter which number is the height, width or the length as the boxes can be rotated.
+
+2) Your output only needs to be a number indicating the maximum height that is possible given the input.
+
+3) Note that all numbers in the input and the output will be integers. You need not care about really large inputs which go beyond the range of an integer.

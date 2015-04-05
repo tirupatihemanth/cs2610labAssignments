@@ -1,0 +1,14 @@
+The program should calculate the length of a longest common subsequence (there may be many, but all with same lengths) between the two given strings and also print the longest common subsequence itself.
+
+The input should take two strings as given in the "tests" folder. The two strings are separated with a '$' sign and the 
+file ends with a '$$' sign so as to indicate the beginning and end of the strings. You can assume that the input strings
+are ONLY CAPITAL ALPHABETS.
+
+Each string is given in chunks of maximum 60 characters per line in order to maintain readability.
+
+Your output should be a number indicating the length of the longest common subsequence and a string which is the longest common subsequence.
+
+The test cases are provided in "in-1-complete" ... "in-4-complete" files. While printing the longest common subsequence, if there
+are multiple possible choices, you can choose to print any one of them and your output in this case need not match the string
+provided in the file. As the output strings need not match, the "make test" command only compares the length of the string found.
+So, even if the tests pass in "make test", your task of printing the strings still remains.

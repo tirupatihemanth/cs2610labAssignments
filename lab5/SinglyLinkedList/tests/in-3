@@ -1,0 +1,10 @@
+append 1
+append 2
+append 3
+remove-last
+remove-last
+remove-last
+append 4
+append 5
+count
+quit

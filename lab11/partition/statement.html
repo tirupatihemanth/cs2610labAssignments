@@ -1,0 +1,33 @@
+<body>
+<h2>3-way Partition</h2>
+
+<blockquote>
+  <p><b>Note: All code should be written within <a href="">this template
+      directory</a></b>. Test cases have been provided in the folder
+  <code>tests</code>, and can be run using <code>make test</code>. </p> 
+</blockquote>
+
+<p>
+Consider an list of any length containing exactly 3 integer values, 0,
+1 and 2 in some random order. Use the loop invariants taught in class to
+write an algorithm to group the integers; all the 0s should be followed
+by all the 1s, which in turn should be followed by all the 2s. Try to
+write the algorithm so that it will need to loop over the array only
+once.
+</p>
+
+<h3>Sample Input/Output</h3>
+<p>
+<b>Input:</b> <code>7
+0 1 2 1 2 0 0 </code> <br /> 
+<b>Output:</b> <code>0 0 0 1 1 2 2</code>
+</p>
+
+<h3>Further Discussion and Hints</h3>
+<p>
+While trying to reason about the program, keep track of the position of
+the last 0 and the first 2. Every time you see a 0, move it to the
+beginning; every time you see a 2 move it to the end. 
+</p>
+
+</body>

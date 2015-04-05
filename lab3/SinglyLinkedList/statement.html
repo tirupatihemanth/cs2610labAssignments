@@ -1,0 +1,48 @@
+
+<blockquote>
+  <p><b>Note: All code should be written within <a href="http://www.cse.iitm.ac.in/moodle/file.php/332/Lab_3_4/SinglyLinkedList.tar.gz">this template directory</a></b><a href="http://www.cse.iitm.ac.in/moodle/file.php/332/Lab_3_4/SinglyLinkedList.tar.gz">.</a> Test cases have been provided in the folder <code>tests</code>, and can be run using <code>make test</code>. </p> <i>This is a moderately difficult assignment. It is recommended that you implement functions in order of presentation in <code>LList.h</code>, and test as and when possible.</i> </blockquote>
+<blockquote>
+  <p>Note: The template code has been updated with the 'shell' completed in main.c, as well as the test cases.</p> </blockquote>
+<h2>Linked Lists</h2>
+<p> Implement a linked list with at least the following operations: </p>
+<ul>
+  <li> <code> LList* llist_new() </code> Create an empty list (head shall be NULL) </li>
+  <li> <code> int llist_size( LList* list ) </code> Traverse the linked list and return its size </li>
+  <li> <code> void llist_print( LList* list ) </code> Traverse the linked list and print each element </li>
+  <li> <code> LList* llist_append( LList* lst, int data ) </code> Add a new element at the end of the list </li>
+  <li> <code> LList* llist_prepend( LList* lst, int data ) </code> Add a new element at the beginning of the list </li>
+  <li> <code> LList* llist_insert( LList* lst, int idx, int data ) </code> Add a new element at the @idx index </li>
+  <li> <code> LList* llist_remove_last( LList* lst ) </code> Remove an element from the end of the list </li>
+  <li> <code> LList* llist_remove_first( LList* lst ) </code> Remove an element from the beginning of the list </li>
+  <li> <code> LList* llist_remove( LList* lst, int idx ) </code> Remove an element from an arbitrary position in the list </li>
+</ul>
+<h2>List Command Shell</h2>
+<p> A basic command interface has been written for you in <code>main.c</code>, which allows you to enter commands like <code>append 1</code>, etc. to append 1 to the list. As you implement the above functions, uncomment the corresponding function calls to them (these have been marked with a NOTE), and test them out. Once you are done, remove the debug print statements (also marked with a NOTE). </p>
+<p> The following commands are supported by the basic shell, </p>
+<ul>
+  <li> <code>quit</code>: Leave the command shell. Pressing &quot;Ctrl+D&quot; also quits the command shell. </li>
+  <li> <code>count</code>: Print the number of elements in the linked list </li>
+  <li> <code>append x</code>: Appends the integer 'x'. </li>
+  <li> <code>prepend x</code>: Prepends the integer 'x'. </li>
+  <li> <code>insert x y</code>: Prepends the integer 'y' at position 'x' in the list. Position 0 is the very beginning of the list, and <code>insert 0 x</code> is the same as <code>prepend x</code>. </li>
+  <li> <code>remove-last</code>: Remove the last element of the list. </li>
+  <li> <code>remove-first</code>: Remove the first element of the list. </li>
+  <li> <code>remove x</code>: Remove the 'x'-th element of the list. </li>
+  <li> <code>print x</code>: Print the 'x'-th element of the list. </li>
+</ul>
+<h2><b>Polynomial Differentiation and Integration</b><br /></h2>
+<p>Use the Linked List ADT implementation to represent a polynomial as a linked list, where each term in the polynomial is represented by a node. <b><i>The data field must encode both the coefficient as well as the exponent.</i></b> The header node will have the term corresponding to the highest polynomial exponent (i.e degree) and the <i>next</i> pointer should point to the node corresponding to the term whose exponent is just lesser than the current node.</p>
+<h3><b>Constraints</b><br /></h3>
+<p>Let d be the degree of the polynomial and a be any coefficient. The range of values for d, a are: <br /><br />
+ <code> 0 &le; d &le; 999 <br /> -999 &le; a &le; 999 <br /> </code> </p>
+<h3> <b>Input/Output format</b><br /></h3>
+<p>The polynomial <code>[ax<sup>n</sup>+bx<sup>(n-1)</sup>+cx<sup>(n-2)</sup>+...+z]</code> must be represented in the following format in input/output files:<br /> <code> a n <br /> b n-1<br /> c n-2<br /> .<br /> .<br /> z 0<br /><br /> </code> Modify the <code>Makefile</code> to create an executable named polynomial. In <code>polynomial.c</code>, implement the following functions:<br /> </p>
+<ul>
+  <li> <code>polynomial polynomial_construct():</code> Read the input file given in the above format, construct a linked list </li>
+  <li> <code>polynomial differentiate(polynomial a):</code> Perform differentiation of the input polynomial. </li>
+  <li> <code>polynomial integrate(polynomial a):</code> Perform integration of the input polynomial. </li>
+  <li> <code>polynomial add_polynomial(polynomial a, polynomial b):</code> Add polynomial a and b. </li>
+  <li> <code>polynomial subtract_polynomial(polynomial a, polynomial b):</code> Subtract polynomial b from a. </li>
+  <li> <code>void print_polynomial(polynomial a):</code> Print the polynomial in the above format.<br /></li>
+</ul> In <code>main2.c</code>, read a polynomial and calculate the differential, integral, sum of the differential and integral, difference between the differential and integral. Display the four resulting polynomials. Leave one line space between each result.<br /> 
+<em>NOTE: Test cases are provided only for Linked List ADT</em>

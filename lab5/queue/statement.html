@@ -1,0 +1,29 @@
+<body>
+
+<h2>Queues:</h2>
+<p>
+The <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">queue</a> is another data structure that you will use very frequently. Queues are very popular in a lot of applications and in resource management systems.
+</p>
+
+<p>
+In its barest form, a queue can also be implemented as a singly-linked list which allows you to add elements only to the end of the list and elements can be removed only from the front of the list.
+</p>
+
+<p>
+Implement a queue with at least the following operations:
+<ul>
+    <li> <code>Queue* queue_new()</code>: Creates a new, empty queue. </li>
+    <li> <code> Queue* queue_new()</code>: Creates a new, empty queue. </li>
+    <li> <code> void queue_delete( Queue* q )</code>: Deletes the queue, freeing all memory.</li>
+    <li> <code>Queue* enqueue( Queue* q, int val )</code>: Inserts val to the rear of the queue. Should return q (<i>Note: By returning the same input, you can chain together many functions like queue_dequeue( queue_enqueue( q ) ), etc. </i>). </li>
+    <li> <code>int queue_front( Queue* q, int* error )</code>: Returns the element currently at the front of the queue. If the queue is empty, error should be set to 1, else 0. (<i>Note: error is an argument passed by reference - give it the address of a locally defined integer.</i>) </li>
+    <li> <code>int queue_rear( Queue* q, int* error )</code>: Returns the element currently at the rear-end of the queue. If the queue is empty, error should be set to 1, else 0. (<i>Note: error is an argument passed by reference - give it the address of a locally defined integer.</i>) </li>
+    <li> <code>Queue* dequeue( Queue* q )</code>: Deletes the value at the front of the queue. Remember to free memory. </li>
+    <li> <code>int queue_size( Queue* q )</code>: Return the number of elements in the queue. </li>
+    <li> <code>void queue_print( Queue* q )</code>: Iterates over the entire queue, printing its elements one by one - separated by spaces. </li>
+</ul>
+</p>
+
+
+<em>You may have to reuse this code in your future assignments. Make sure your code does not have any errors.</em>
+</body>
